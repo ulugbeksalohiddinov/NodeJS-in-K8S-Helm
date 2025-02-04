@@ -1,9 +1,10 @@
 - Initialize a Node.js project:
 
-    npm init -y
+      npm init -y
+  
 - Install required dependencies:
 
-    npm install express pg dotenv
+      npm install express pg dotenv
   
   express: For creating the API.
   

@@ -1,7 +1,7 @@
 - Initialize a Node.js project:
 
-      npm init -y
-  
+    npm init -y
+
 - Install required dependencies:
 
       npm install express pg dotenv
@@ -12,7 +12,7 @@
 
   dotenv: For managing environment variables.
 
--Install development dependencies (optional):
+- Install development dependencies (optional):
     
     npm install --save-dev nodemon
  

@@ -45,3 +45,6 @@
 
     docker pull asdxxyy/nodejs
 
+**Create Secret in Kubernetes**
+
+    kubectl create secret generic secjs --from-literal DB_PASSWORD=123 --from-literal DB_USER=userjs --from-literal DB_NAME=dbjs --from-literal PORT=3000 --from-literal DB_HOSTS=192.168.182.151 --from-literal DB_PORT=5432

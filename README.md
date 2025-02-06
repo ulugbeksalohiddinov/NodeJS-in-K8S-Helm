@@ -34,3 +34,14 @@
     DB_NAME=${DB_NAME}
     DB_PORT=${DB_PORT}
     PORT=${PORT}
+
+**Login DockerHub**
+
+    docker login --username asdxxyy
+
+**Create docker image and push DockerHub**
+
+    docker build -t asdxxyy/nodejs .
+
+    docker pull asdxxyy/nodejs
+

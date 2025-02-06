@@ -4,3 +4,25 @@
 
   - _**user.js**_ in **models** folder
 
+ **Write Dockerfile**
+
+     # Use official Node.js image
+     FROM node:18
+
+     # Set the working directory
+     WORKDIR /app
+
+     # Install dependencies
+     COPY package.json package-lock.json ./
+     RUN npm install
+
+     # Copy the rest of the application files
+     COPY . .
+
+     # Expose the port
+     EXPOSE 3000
+
+     # Start the app
+     CMD ["node", "server.js"]
+
+

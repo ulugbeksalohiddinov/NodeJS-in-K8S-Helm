@@ -1,6 +1,5 @@
 -- server.js --
-
-       
+    
 const express = require('express');
 const { User, sequelize } = require('./models/user');
 const dotenv = require('dotenv');

@@ -48,3 +48,37 @@
 **Create Secret in Kubernetes**
 
     kubectl create secret generic secjs --from-literal DB_PASSWORD=123 --from-literal DB_USER=userjs --from-literal DB_NAME=dbjs --from-literal PORT=3000 --from-literal DB_HOSTS=192.168.182.151 --from-literal DB_PORT=5432
+
+**Create Deployment in Kubernetes**
+
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy-node
+      name: deploy-node
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: deploy-node
+      strategy: {}
+      template:
+        metadata:
+          creationTimestamp: null
+          labels:
+            app: deploy-node
+        spec:
+          containers:
+          - image: ulugbekit94/nodejs
+            name: nodejs
+            envFrom:
+            - secretRef:
+                name: secjs
+            ports:
+            - containerPort: 3000
+            resources: {}
+    status: {}
+
+

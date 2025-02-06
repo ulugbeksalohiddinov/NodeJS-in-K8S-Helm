@@ -71,7 +71,7 @@
             app: deploy-node
         spec:
           containers:
-          - image: ulugbekit94/nodejs
+          - image: asdxxyy/nodejs
             name: nodejs
             envFrom:
             - secretRef:
@@ -175,7 +175,7 @@
 
     #Image
     image:
-      repository: ulugbekit94/nodejs
+      repository: asdxxyy/nodejs
       tag: latest
       pullPolicy: IfNotPresent
       pullSecretName: my-pull-secret

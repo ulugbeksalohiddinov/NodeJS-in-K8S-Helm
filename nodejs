@@ -87,7 +87,7 @@ sequelize.sync({ force: false }).then(() => {
 
 -- user.js --
 
-    const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = new Sequelize({
   host: process.env.DB_HOSTS,
   dialect: 'postgres',

@@ -144,3 +144,25 @@
       type: {{ .Values.serviceType }}
     status:
       loadBalancer: {}
+
+**ingress.yaml**
+
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: {{ .Release.Name }}-ingress
+      creationTimestamp: null
+    spec:
+      rules:
+      - host: {{ .Values.domen }}
+        http:
+          paths:
+          - backend:
+              service:
+                name: {{ .Release.Name }}-srv
+                port:
+                  number: {{ .Values.servicePort }}
+            path: /
+            pathType: {{ .Values.pathType }}
+    status:
+      loadBalancer: {}

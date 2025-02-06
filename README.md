@@ -166,3 +166,33 @@
             pathType: {{ .Values.pathType }}
     status:
       loadBalancer: {}
+
+**values.yaml**
+
+    #Replicas
+    replicaCount: 1
+    revisionHistoryLimit: 1
+
+    #Image
+    image:
+      repository: ulugbekit94/nodejs
+      tag: latest
+      pullPolicy: IfNotPresent
+      pullSecretName: my-pull-secret
+
+    #Ports
+    containerPort: 3000
+
+    #Secrets
+    secretName: secjs
+
+
+    #Service-Params
+    servicePort: 80
+    #targetPort: 80
+    serviceType: ClusterIP
+
+    #Ingress-Params
+    domen: kubs.uz
+    pathType: Prefix
+
